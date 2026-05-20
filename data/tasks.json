@@ -2,59 +2,99 @@
   "tasks": [
     {
       "id": "task_001",
-      "title": "Review OB&CO project pipeline for May",
-      "description": "Go through all active projects and check status:\n- Amart Joondalup — Fredon Air WA\n- AOC Building 3 Toilet Block Design\n- 97 South Perth Esplanade\n- Byford Health Hub\n- Arco Hood Street Subiaco\n- BPACC close out\n- Santa Maria College pricing\n- HMAS Stirling GWEOSP\n- Fremantle Hospital MHU\n\nUpdate any outdated priorities and flag anything that needs client follow-up.",
+      "title": "Clear 22 unmatched attachments",
+      "description": "Run show_unmatched.py and match all 22 unmatched emails/attachments to existing projects or file them appropriately.",
       "status": "backlog",
       "project": "OB&CO",
       "priority": "high",
-      "dod": "All 9 active projects reviewed, any issues flagged, priorities updated for the week.",
+      "dod": "show_unmatched.py returns 0 unmatched items.",
       "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "Check Amart Joondalup — Fredon PO status",
-          "done": false
-        },
-        {
-          "id": "sub_002",
-          "title": "Check Byford Health Hub — Morair client update needed?",
-          "done": false
-        },
-        {
-          "id": "sub_003",
-          "title": "Check BPACC close-out — any pending items",
-          "done": false
-        },
-        {
-          "id": "sub_004",
-          "title": "Flag any projects overdue or at risk",
-          "done": false
-        }
+        {"id": "sub_001", "title": "Run show_unmatched.py", "done": false},
+        {"id": "sub_002", "title": "Match Fredon remittance $6,600 to project", "done": false},
+        {"id": "sub_003", "title": "File remaining unmatched items", "done": false}
       ],
       "comments": [],
-      "createdAt": "2026-05-19T15:23:00+08:00"
+      "createdAt": "2026-05-20T10:00:00+08:00"
     },
     {
       "id": "task_002",
-      "title": "Check for unmatched invoice items",
-      "description": "Run the unmatched attachments scan and match any that can be assigned to existing projects.",
+      "title": "Review active project pipeline",
+      "description": "Check status of all 30 active projects. Flag anything needing client follow-up, overdue POs, or pending drawings.",
       "status": "backlog",
       "project": "OB&CO",
-      "priority": "medium",
-      "dod": "All unmatched attachments resolved — either matched to a project or filed.",
+      "priority": "high",
+      "dod": "All projects reviewed, overdue items flagged, priorities updated.",
       "subtasks": [
-        {
-          "id": "sub_001",
-          "title": "Run show_unmatched.py",
-          "done": false
-        },
-        {
-          "id": "sub_002",
-          "title": "Match any attachable items to projects",
-          "done": false
-        }
+        {"id": "sub_001", "title": "Run list_projects.py and review all 30", "done": false},
+        {"id": "sub_002", "title": "Flag any overdue or at-risk projects", "done": false},
+        {"id": "sub_003", "title": "Update WORKING.md with current priorities", "done": false}
       ],
       "comments": [],
-      "createdAt": "2026-05-19T15:23:00+08:00"
+      "createdAt": "2026-05-20T10:00:00+08:00"
+    },
+    {
+      "id": "task_003",
+      "title": "Set up Discord as primary Steve channel",
+      "description": "Confirm Steve is receiving and responding to messages via Discord. Disable WhatsApp if Discord is working correctly.",
+      "status": "in_progress",
+      "project": "Steve Setup",
+      "priority": "high",
+      "dod": "Steve responds to messages in Discord channel. WhatsApp optionally disabled.",
+      "subtasks": [
+        {"id": "sub_001", "title": "Confirm Discord bot responds in channel", "done": false},
+        {"id": "sub_002", "title": "Test watchdog Discord alerts", "done": true},
+        {"id": "sub_003", "title": "Disable WhatsApp if Discord confirmed working", "done": false}
+      ],
+      "comments": [],
+      "createdAt": "2026-05-20T10:00:00+08:00"
+    },
+    {
+      "id": "task_004",
+      "title": "Perth Concert Hall — check status",
+      "description": "Review current status of Perth Concert Hall project. Check for any outstanding drawings, RFIs, or client communications.",
+      "status": "backlog",
+      "project": "Perth Concert Hall",
+      "priority": "medium",
+      "dod": "Status confirmed, any outstanding items actioned.",
+      "subtasks": [
+        {"id": "sub_001", "title": "Search emails from project contacts", "done": false},
+        {"id": "sub_002", "title": "Check project folder for outstanding items", "done": false}
+      ],
+      "comments": [],
+      "createdAt": "2026-05-20T10:00:00+08:00"
+    },
+    {
+      "id": "task_005",
+      "title": "Byford Health Hub — Morair update",
+      "description": "Check if Morair need any updated information or drawings for Byford Health Hub.",
+      "status": "backlog",
+      "project": "Byford Health Hub",
+      "priority": "medium",
+      "dod": "Morair contacted and any outstanding items resolved.",
+      "subtasks": [
+        {"id": "sub_001", "title": "Search emails from Morair re Byford", "done": false},
+        {"id": "sub_002", "title": "Draft response if needed", "done": false}
+      ],
+      "comments": [],
+      "createdAt": "2026-05-20T10:00:00+08:00"
+    },
+    {
+      "id": "task_006",
+      "title": "Steve autonomy improvements",
+      "description": "Review and improve Steve's autonomous operation — tighten AGENTS.md, test watchdog, confirm Mission Control board syncing.",
+      "status": "in_progress",
+      "project": "Steve Setup",
+      "priority": "medium",
+      "dod": "Steve operates at full Level 2 autonomy with no unnecessary permission requests.",
+      "subtasks": [
+        {"id": "sub_001", "title": "Deploy updated AGENTS.md", "done": true},
+        {"id": "sub_002", "title": "Watchdog cron running hourly", "done": true},
+        {"id": "sub_003", "title": "Mission Control replacing Notion", "done": true},
+        {"id": "sub_004", "title": "Discord channel confirmed working", "done": false},
+        {"id": "sub_005", "title": "ElevenLabs agent (when budget allows)", "done": false}
+      ],
+      "comments": [],
+      "createdAt": "2026-05-20T10:00:00+08:00"
     }
   ],
   "projects": [
@@ -63,8 +103,26 @@
       "name": "OB&CO",
       "color": "#3b82f6",
       "icon": "🏢"
+    },
+    {
+      "id": "Perth Concert Hall",
+      "name": "Perth Concert Hall",
+      "color": "#8b5cf6",
+      "icon": "🎭"
+    },
+    {
+      "id": "Byford Health Hub",
+      "name": "Byford Health Hub",
+      "color": "#10b981",
+      "icon": "🏥"
+    },
+    {
+      "id": "Steve Setup",
+      "name": "Steve Setup",
+      "color": "#f59e0b",
+      "icon": "🦞"
     }
   ],
   "activities": [],
-  "lastUpdated": "2026-05-19T15:23:00+08:00"
+  "lastUpdated": "2026-05-20T10:00:00+08:00"
 }
